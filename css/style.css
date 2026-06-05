@@ -1,0 +1,662 @@
+/* Seleciona todos os elementos */
+*{
+    box-sizing:border-box; /* largura inclui borda e padding */
+    margin:0; /* remove margens padrão */
+    padding:0; /* remove espaçamentos padrão */
+}
+
+/* Variáveis globais */
+:root{
+    --primary-color:rgb(255,115,0); /* cor principal */
+    --background-color:rgb(231, 211, 155); /* cor clara */
+    --nav-color:black; /* cor menu */
+    --body-color:rgb(216, 163, 48); /* cor extra */
+}
+
+/* Corpo do site */
+body{
+    font-family:Arial,sans-serif; /* fonte principal */
+}
+
+main{
+    background-color:var(--background-color); /* fundo claro */
+    padding:20px; /* espaço interno */
+   
+}
+
+/* Cabeçalho */
+header{
+    margin:0; /* remove margem grande */
+}
+
+/* Barra de navegação */
+nav{
+    background-color:var(--nav-color); /* usa variável */
+
+    padding:15px 0; /* espaço em cima e embaixo */
+
+    display:flex; /* ativa flexbox */
+
+    justify-content:center; /* centraliza itens */
+
+    gap:30px; /* espaço entre links */
+
+    font-family:'Times New Roman',Times,serif; /* fonte */
+
+    font-size:larger; /* aumenta texto */
+
+    box-shadow:0 2px 10px rgba(0,0,0,.1); /* sombra */
+}
+
+/* Links menu */
+nav a{
+
+    text-decoration:none; /* remove sublinhado */
+
+    color:var(--background-color); /* cor texto */
+
+    padding:10px 18px; /* espaço interno */
+
+    border-radius:8px; /* arredonda */
+
+    transition:.3s; /* animação */
+}
+
+/* Efeito menu */
+nav a:hover{
+
+    background-color:var(--primary-color); /* muda cor */
+
+    transform:translateY(-2px); /* sobe */
+}
+
+/* Área principal */
+main{
+    background-color:var(--body-color);
+
+    min-height:100vh; /* ocupa a tela toda */
+
+    margin:0;
+
+    padding-bottom:30px; /* espaço antes do footer */
+}
+
+/* Títulos */
+h2{
+
+    text-align:center; /* centraliza */
+
+    font-family:'Times New Roman',Times,serif;
+
+    font-weight:bold;
+
+    color:#c95700;
+
+    padding:5%;
+
+}
+
+/* Parágrafos */
+p{
+
+    text-align:center;
+
+    font-family:'Lucida Sans',Geneva,Verdana,sans-serif;
+
+    color:black;
+
+    padding:0.5% 25%; /* corrigido */
+
+    margin:auto;
+}
+
+/* Galeria */
+.galeria{
+
+    display:flex; /* flexbox */
+
+    justify-content:center; /* centraliza */
+
+    align-items:center; /* alinha */
+
+    margin-top:30px;
+}
+
+/* Figura */
+.galeria figure{
+
+    text-align:center;
+
+    margin:0;
+}
+
+/* Imagens */
+.galeria img{
+
+    border-radius:10px; /* arredonda */
+
+    cursor:pointer; /* mãozinha */
+
+    transition:.3s; /* animação */
+}
+
+/* Efeito imagem */
+.galeria img:hover{
+
+    transform:scale(1.05); /* aumenta */
+}
+
+/* Modal */
+.modal{
+
+    display:none; /* começa escondido */
+
+    position:fixed; /* fixa tela */
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.9); /* fundo escuro */
+
+    z-index:999; /* fica na frente */
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+/* Carrossel */
+.carrossel{
+
+    width:80%; /* ocupa tela */
+
+    max-width:300px; /* máximo */
+
+    margin:50px auto;
+
+    position:relative;
+}
+
+/* Imagens carrossel */
+.carrossel img{
+
+    width:100%;
+
+    height:auto;
+
+    border-radius:15px;
+
+    display:none;
+}
+
+/* Imagem ativa */
+.carrossel img.ativo{
+
+    display:block;
+}
+/* Carrossel */
+.carrossel{
+    position:relative;
+}
+
+/* Botões do carrossel */
+.botao{
+
+    position:absolute;
+
+    top:50%;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+    color:white;
+
+    z-index:100;
+}
+
+/* Botão esquerda */
+.botao.anterior{
+    left:-40px;
+}
+
+/* Botão direita */
+.botao.proximo{
+    right:-40px;
+}
+
+/* Botão fechar */
+.fechar{
+
+    position:absolute;
+
+    top:20px;
+
+    right:30px;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    color:white;
+}
+
+/* Hero */
+.hero{
+
+    height:100vh; /* tela inteira */
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center; /* centro vertical */
+
+    align-items:center; /* centro horizontal */
+
+    text-align:center;
+
+    padding:20px;
+
+    background:linear-gradient(
+    135deg,
+    #c95700,
+    #ff8c00,
+    #ffd65a
+    );
+
+    color:white;
+}
+
+/* Texto hero */
+.hero-text{
+
+    max-width:600px;
+}
+
+/* Título hero */
+.hero h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+}
+
+/* Texto hero */
+.hero p{
+
+    font-size:1.2rem;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+
+    color:white;
+}
+
+/* Botão hero */
+.botao-hero{
+
+    display:inline-block;
+
+    position:relative;
+
+    top:20px;
+
+    background:white;
+
+    color:#c95700;
+
+    padding:10px 22px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+/* Hover botão */
+.botao-hero:hover{
+
+    transform:scale(1.05);
+}
+
+/* Formulário */
+form{
+
+    width:80%;
+
+    max-width:800px;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    font-family:Arial,sans-serif;
+}
+
+
+/* Área dos grupos */
+fieldset{
+
+    border:none;
+
+    margin-bottom:25px;
+}
+
+
+/* Título dos grupos */
+legend{
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+    color:#c95700;
+
+    margin-bottom:20px;
+}
+
+
+/* Cada campo */
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:15px;
+}
+
+
+/* Texto do label */
+label{
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#444;
+}
+
+
+/* Inputs */
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid #e4e4e4;
+
+    border-radius:10px;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+
+/* Efeito ao clicar */
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#ff8c00;
+
+    box-shadow:0 0 10px rgba(255,140,0,.3);
+}
+
+
+/* Botões */
+.botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+
+/* Botões do formulário */
+.botoes button{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:linear-gradient(
+    to right,
+    #c95700,
+    #ff8c00
+    );
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+/* Hover */
+.botoes button:hover{
+
+    transform:scale(1.05);
+}
+
+/* Tabela inteira */
+table{
+    
+    width:80%; /* largura */
+
+    max-width:800px; /* limite máximo */
+
+    margin:50px auto; /* centraliza */
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    text-align:center;
+
+    font-family:Arial,sans-serif;
+}
+
+/* Título da tabela */
+caption{
+
+    margin-bottom:15px;
+
+    font-size:1.3rem;
+
+    font-weight:bold;
+
+    color:#c95700;
+}
+
+/* Cabeçalho */
+thead{
+
+    background:linear-gradient(
+    to right,
+    #c95700,
+    #ff8c00
+    );
+
+    color:white;
+}
+
+/* Cabeçalho e células */
+th,
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+}
+
+/* Efeito ao passar mouse */
+tbody tr:hover{
+
+    background:#fff3e0;
+
+    transition:.3s;
+}
+
+/* Remove linha da última linha */
+tbody tr:last-child td{
+
+    border-bottom:none;
+}
+
+/* Rodapé */
+tfoot{
+
+    background:#f7f7f7;
+
+    font-weight:bold;
+}
+
+footer{
+
+    background-color:var(--nav-color);
+
+    color:var(--background-color);
+
+    text-align:center;
+
+    padding:15px ;
+
+    margin:0;
+
+    font-family:'Times New Roman',Times,serif;
+}
+/* RESPONSIVIDADE CELULAR */
+@media (max-width:768px){
+
+/* Menu */
+nav{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    padding:10px;
+}
+
+nav a{
+    width:90%;
+    text-align:center;
+}
+
+/* Hero */
+.hero{
+    height:auto;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero p{
+    font-size:1rem;
+    padding:0;
+}
+
+/* Títulos */
+h2{
+    font-size:1.8rem;
+    padding:20px;
+}
+
+/* Parágrafos */
+p{
+    padding:10px;
+    width:100%;
+}
+
+/* Galeria */
+.galeria{
+    flex-direction:column;
+    gap:20px;
+}
+
+.galeria img{
+    width:90%;
+    max-width:300px;
+}
+
+/* Carrossel */
+.carrossel{
+    width:90%;
+}
+
+.botao.anterior{
+    left:-20px;
+}
+
+.botao.proximo{
+    right:-20px;
+}
+
+/* Formulário */
+form{
+    width:95%;
+    padding:20px;
+}
+
+/* Botões formulário */
+.botoes{
+    flex-direction:column;
+}
+
+.botoes button{
+    width:100%;
+}
+
+/* Tabela */
+table{
+    width:95%;
+    font-size:.8rem;
+    display:block;
+    overflow-x:auto;
+}
+
+/* Footer */
+footer{
+    padding:20px;
+    font-size:.9rem;
+}
+
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>  
+<body>
+    <!--Cabeçalho-->
+    <header>
+    <h1>DIGA</h1>
+        <p>Soluçoes Criativas Para um Marketing Inteligente</p>
+    </header>
+    <!--Navegação-->
+        <nav>
+        <a href="index.html">inicio</a>
+        <a href="projetos.html">portifolios</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="https://www.instagram.com/jessbeckeer/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <main>
+    <form action="obrigado.html" method="get">
+        
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div class="campo">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo" required minlength="3">
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone para contato</label>
+                <input type="text" id="telefone" name="telefone" placeholder="(11)99999-9999">
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+
+            <select id="assunto" name="assunto" required>
+                <option value="">Selecione o Assunto</option>
+                <option value="orcamento">Orçamento</option>
+                <option value="parceria">Parceria</option>
+                <option value="pacotes">Pacotes</option>
+            </select>
+
+            <textarea name="mensagem" id="mensagem" rows="5" minlength="20" maxlength="500" required
+                placeholder="Fala mesmo"></textarea>
+        </fieldset>
+
+        <div class="botoes">
+            <button type="reset">Limpar Tudo</button>
+            <button type="submit">Enviar Mensagem</button>
+        </div>
+
+    </form>
+
+    <table>
+        <caption>Horarios de Atendimento</caption>
+        <thead>
+            <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Contato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Seg-Sex</td>
+                <td>8h-18h</td>
+                <td>(47) 9 3384-2740</td>
+            </tr>
+            <tr>
+                <td>Sabado</td>
+                <td>9h-13h</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Domingo: Fechado</td>
+            </tr>
+        </tfoot>
+    </table>
+    </main>  
+    <!-- Rodapé -->
+    <footer>
+        <h3>&copy; 2026 DIGA 2026. Todos os direitos reservados.</h3>
+    </footer>
+
+</body>
+</html>
