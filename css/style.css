@@ -726,9 +726,9 @@ form{
 /* Tabela */
 table{
     
+    width:100%;
     font-size:.8rem;
-    display:block;
-    overflow-x:auto;
+  
 }
 
 /* Footer */
