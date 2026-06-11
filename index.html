@@ -56,9 +56,9 @@ Ver Portfólio
 
 <a href="index.html">Início</a>
 
-<a href="#portifolio">Portfólios</a>
+<a href="#apt">Portfólios</a>
 
-<a href="servicos.html">Serviços</a>
+<a href="#servicos">Serviços</a>
 
 <a href="https://www.instagram.com/jessbeckeer/"
 target="_blank">Instagram</a>
@@ -77,12 +77,15 @@ target="_blank">Instagram</a>
 
 <section>
 
-<h2>Quem somos</h2>
-
+<div class="titulo-box">
+<h2>Quem Somos</h2>
+</div>
+<h2>Somos a DIGA Soluções Criativas</h2>
 <p>
 Somos apaixonados por transformar ideias em conteúdo que chama atenção e aproxima marcas das pessoas.
 </p>
 
+<div class="sobre1">
 <h2>Missão</h2>
 
 <p>
@@ -93,95 +96,167 @@ Criar conteúdos e estratégias que ajudem marcas a crescer.
 
 <p>
 Ser reconhecida por desenvolver trabalhos criativos.
-</p>
-
+</p><div id="quem-somos" class="quem-somos">
+<img src="image/jessikiller.JPG" alt="Foto da equipe DIGA" width="150" height="200">
+</div>
+</div>  
 </section>
 
 
 
 <!-- GALERIA -->
+<section id="apt">
+<div class="titulo-box">
+    
+<h2>Portfólio</h2>
+
+</div></section>
 
 <section id="portifolio" class="galeria">
 
-<figure>
-<h2>Portfólios</h2>
-<img
-src="image/foto1.jpeg"
+    <figure>
+        <img src="image/foto1.jpeg"
+             alt="Sanduba"
+             width="100"
+             height="100"
+             onclick="abrirGaleria('sanduba')">
 
-alt="Sanduba"
+        <figcaption>Sanduba</figcaption>
+    </figure>
 
-width="280"
+    <figure>
+        <img src="image/estudiofit (5).png"
+             alt="Estudio Fit"
+             width="100"
+             height="100"
+             onclick="abrirGaleria('estudio')">
 
-height="280"
+        <figcaption>Estudio Fit</figcaption>
+    </figure>
 
-loading="lazy"
+    <figure>
+        <img src="image/nossobar (5).png"
+             alt="Nosso Bar"
+             width="100"
+             height="100"
+             onclick="abrirGaleria('bar')">
 
-onclick="abrirGaleria()">
-
-<figcaption>
-
-Sanduba
-
-</figcaption>
-
-</figure>
+        <figcaption>Nosso Bar</figcaption>
+    </figure>
 
 </section>
-
-
 
 <!-- MODAL -->
 
 <div class="modal" id="meuCarrossel">
 
-<!-- botão fechar -->
-<span
-class="fechar"
-onclick="fecharGaleria()">
+    <span class="fechar" onclick="fecharGaleria()">
+        ✕
+    </span>
 
-X
+    <div class="carrossel">
 
-</span>
+        <span class="botao anterior" onclick="mudar(-1)">
+            ❮
+        </span>
 
+        <img id="imagemAtual" src="" alt="Portfólio">
 
-<!-- CARROSSEL -->
-<div class="carrossel">
+        <span class="botao proximo" onclick="mudar(1)">
+            ❯
+        </span>
 
-<!-- botão esquerda -->
-<span
-class="botao anterior"
-onclick="mudar(-1)">
-
-❮
-
-</span>
-
-
-<!-- imagens -->
-
-<img src="image/foto1.jpeg" class="ativo">
-
-<img src="image/foto2.jpeg">
-
-<img src="image/foto3.jpeg">
-
-<img src="image/foto4.jpeg">
-
-
-<!-- botão direita -->
-<span
-class="botao proximo"
-onclick="mudar(1)">
-
-❯
-
-</span>
-
-</div>
+    </div>
 
 </div>
 
 
+
+<!--serviços-->
+<section ID="servicos">
+
+<table>
+
+<caption>
+
+Serviços
+
+</caption>
+
+<thead>
+
+<tr>
+
+<th>Modelo</th>
+
+<th>Descrição</th>
+
+<th>valor</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>Pulse</td>
+
+<td>Ideal para pequenos negócios que desejam marcar presença nas redes sociais. Inclui planejamento básico, criação de artes para feed e stories, calendário de publicações e suporte estratégico mensal.
+    12 artes feed + 20 stories/mês
+</td>
+
+<td>R$ 890/mês</td>
+
+</tr>
+
+<tr>
+
+<td>Flow</td>
+
+<td>Para empresas que buscam crescimento consistente. Inclui planejamento estratégico, criação de conteúdos para feed e stories, acompanhamento de desempenho, identidade visual alinhada e suporte contínuo para campanhas e promoções.
+    16 artes feed + 30 stories/mês + relatórios
+</td>
+
+<td>R$ 1.490/mês</td>
+
+
+</tr>
+
+<tr>
+
+<td>Prime</td>
+
+<td>Gestão completa da presença digital. Inclui estratégia personalizada, criação de conteúdos avançados, artes para campanhas, acompanhamento de métricas, suporte prioritário, planejamento de lançamentos e ações para fortalecer a marca e aumentar resultados.
+    20 artes feed + stories diários + campanhas e suporte prioritário
+</td>
+
+<td>R$ 2.290/mês</td>
+
+</tr>
+
+</tbody>
+
+
+<tfoot>
+
+<tr>
+
+<td colspan="3">
+
+* Preços sujeitos a alterações. Entre em contato para mais informações.
+
+</td>
+
+</tr>
+
+</tfoot>
+
+</table>
+
+</section>
 
 <!-- FORMULÁRIO -->
 
@@ -193,7 +268,7 @@ onclick="mudar(1)">
 
 <legend>
 
-Dados pessoais
+Entre em contato conosco
 
 </legend>
 

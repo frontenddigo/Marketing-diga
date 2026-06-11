@@ -10,15 +10,25 @@
     --primary-color:rgb(255,115,0); /* cor principal */
     --background-color:rgb(231, 211, 155); /* cor clara */
     --nav-color:black; /* cor menu */
-    --body-color:rgb(216, 163, 48); /* cor extra */
+    --body-color: #ff8001,#ffe8d1,#fff3e8; /* cor extra */
 }
 
 /* Corpo do site */
 body{
+   
+
     font-family:Arial,sans-serif; /* fonte principal */
 }
 
 main{
+ min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #ff8001,
+        #ffe8d1,
+        #fff3e8
+    );
+    background-attachment: fixed;
     background-color:var(--background-color); /* fundo claro */
     padding:20px; /* espaço interno */
    
@@ -92,8 +102,59 @@ h2{
 
     color:#c95700;
 
-    padding:5%;
+    padding:5px 100px 5px 100px; /* espaço em cima e embaixo */
 
+    white-space:nowrap; /* evita quebra de linha */
+
+    width: fit-content;
+
+    margin: 0px auto; /* centraliza horizontalmente */
+
+}
+
+.titulo-box {
+    background-color: #fff3e8;
+    border: 2px solid #c95700;
+    border-radius: 10px;
+    padding: 15px;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.titulo-box h2 {
+    margin: 0px 0;
+    color: #c95700;
+    text-align: center;
+}
+
+.titulo-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.quem-somos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 80px auto;
+    width: 80%;
+}
+
+.quem-somos img {
+    border-radius: 50%;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid #c95700;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.quem-somos p {
+    max-width: 500px;
+    text-align: justify;
 }
 
 /* Parágrafos */
@@ -107,7 +168,7 @@ p{
 
     padding:0.5% 25%; /* corrigido */
 
-    margin:auto;
+    margin:25px auto;
 }
 
 /* Galeria */
@@ -125,19 +186,25 @@ p{
 /* Figura */
 .galeria figure{
 
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     text-align:center;
-
-    margin:0;
+    margin:25px;
 }
+
 
 /* Imagens */
 .galeria img{
-
-    border-radius:10px; /* arredonda */
+display:flex;
+justify-content:center;
+    border-radius:50%; /* arredonda */
 
     cursor:pointer; /* mãozinha */
 
     transition:.3s; /* animação */
+
+    align-items: center;
 }
 
 /* Efeito imagem */
@@ -191,7 +258,6 @@ p{
 
     border-radius:15px;
 
-    display:none;
 }
 
 /* Imagem ativa */
@@ -265,12 +331,12 @@ p{
 
     background:linear-gradient(
     135deg,
-    #c95700,
-    #ff8c00,
-    #ffd65a
+    #ff8001,
+        #ffe8d1,
+        #fff3e8
     );
 
-    color:white;
+    color:rgb(10, 10, 10);
 }
 
 /* Texto hero */
@@ -296,7 +362,7 @@ p{
 
     margin-bottom:25px;
 
-    color:white;
+    color:rgb(8, 8, 8);
 }
 
 /* Botão hero */
@@ -308,9 +374,9 @@ p{
 
     top:20px;
 
-    background:white;
+    background:rgb(10, 10, 10);
 
-    color:#c95700;
+    color:#fcfcfc;
 
     padding:10px 22px;
 
@@ -342,7 +408,7 @@ form{
 
     padding:30px;
 
-    border-radius:15px;
+    border-radius:10px;
 
     box-shadow:0 5px 20px rgba(0,0,0,.1);
 
@@ -515,6 +581,8 @@ thead{
     #ff8c00
     );
 
+    border-bottom:2px solid #e4e4e4;
+
     color:white;
 }
 
@@ -596,8 +664,8 @@ nav a{
 
 /* Títulos */
 h2{
-    font-size:1.8rem;
-    padding:20px;
+    font-size:1rem;
+    padding:0px;
 }
 
 /* Parágrafos */
@@ -647,7 +715,7 @@ form{
 
 /* Tabela */
 table{
-    width:95%;
+    
     font-size:.8rem;
     display:block;
     overflow-x:auto;
