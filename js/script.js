@@ -100,7 +100,7 @@ ${mensagem}`;
 
 
 /* número WhatsApp */
-let numero = "+5547933842740";
+let numero = "+5547933842530";
 
 
 /* abre WhatsApp */

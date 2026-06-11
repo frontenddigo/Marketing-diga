@@ -595,6 +595,16 @@ td{
     border-bottom:1px solid #eee;
 }
 
+table a{
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+table a:hover{
+    color: #c95700;
+}
+
 /* Efeito ao passar mouse */
 tbody tr:hover{
 
